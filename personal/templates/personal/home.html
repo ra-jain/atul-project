@@ -1,0 +1,130 @@
+{% extends  'base.html' %}
+
+
+{% block title %}
+{% endblock title %}
+
+{% load static %}
+{% block content %}
+<style>
+    #logo1{
+        align-items: center;
+        color: white;
+    }
+
+    #header-main-parent{
+        background-image:linear-gradient( to right,#000000 1% ,#00000050)
+        /* ,url({% static 'image/main-image' %})*/; 
+        height:100vh;
+    }
+    #header-container{
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+    }
+    ul{
+        list-style: none;
+        color: white;
+    }
+    li{
+        padding: 10px;
+        margin: 10px;
+    }
+    #logo1 > #logo-text {
+        display: none;
+    }
+    #request {
+        display: none;
+    }
+    #donate{
+    background-color: #d8265e;
+    border-radius: 10px;
+}
+    @media screen and (min-width: 650px){
+        #logo1 > #logo-text {
+        display: block;
+    }
+    #request {
+        display: block;
+    }
+    }
+    main{
+        height:75%;
+    }
+    .center-child{
+        justify-content:center;
+        align-items:center;
+    }
+    #main-container{
+        margin:auto;
+    }
+    #main-content{
+        color: white;
+    }
+    h2{
+        padding: 20px 0;
+    }
+    h3{
+        font-weight: 300;
+        font-size: 32px;
+    }
+    #second-slide{
+        height: 75vh;
+    }
+</style>
+<div id="header-main-parent">
+
+<header>
+    <div id="header-container" class="flex-row">
+        <div id="logo1" class="flex-row">
+            <img src="{% static 'logo/logo1.png' %}" alt="logo" id="logo-image">
+            <div id="logo-text">Food Donate</div>
+        </div>
+        <nav>
+            <ul id="navigation-list" class="flex-row">
+                <li id="aboutus">About Us</li>
+                <li id="request">Request</li>
+                <li id="donate">Donate</li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="flex center-child">
+    <div id="main-container" class="flex-column">
+        <div id="main-content">
+            <h1>Food Donation Management</h1>
+            <h2>We allow users to request and donate for food all throughout India.
+            </h2>
+        </div>
+        <ul id="navigation-list" class="flex-row">
+            <li id="request1">Request</li>
+            <li id="donate">Donate</li>
+        </ul> 
+    </div>
+</main>
+</div>
+<div id="second-slide" class="flex center-child">
+    <div id="second-slide-container" class="flex-column">
+        <div id="content1" class="flex">
+            <h3>Food donate is not for profit application,<br> designing a way to contact to donors<br> recievers and thus manage <br> food donations.</h3>
+        </div>
+        <div id="content2" class="flex">
+            <h3>Become an Agent of Change</h3>
+
+        </div>
+        <div id="content3" class="flex"></div>
+    </div>
+</div>
+<div id="forums">
+    <div id="forums-container" class="flex">
+        <div id="forums-title"></div>
+        <div id="forum-content" class="flex">
+            <div id="forum1"></div>
+            <div id="forum2"></div>
+            <div id="forum3"></div>
+            <div id="forum4"></div>
+            <div id="forum5"></div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

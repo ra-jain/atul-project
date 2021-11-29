@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=z, initial-scale=1.0">
+    <title>Food Donate {% block title %}{% endblock title %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+{% load static %}
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
+</head>
+<style>
+    body{
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+    }
+    *{
+        /* display: block; */
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+    a{
+        display: block;
+        color: inherit;
+        text-decoration: none;
+    }
+    .flex{
+        display: flex;
+
+    }
+    .flex-row{
+        display: flex;
+        flex-direction: row;
+    }
+    .flex-column{
+        display: flex;
+        flex-direction: column;   
+    }
+    .container{
+        flex-direction: column;
+        /* align-items: center; */
+        justify-content: end;
+        background-color: #f8f8f8;
+    }
+    #thanks{
+        text-align: center;
+        color: white;
+        background-color: black;
+    }
+    .footer-link{
+        color: rgb(105, 105, 105);
+    }
+    .footer-title{
+        font-size: 20px;
+    }
+    .footer-content{
+        padding: 10px;
+    }
+    #logo{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    #logo-image{
+        height: 60px;
+        width: auto;
+        padding-right: 10px;
+    }
+    #logo-text{
+        font-size: 30px;
+    }
+    @media screen and (min-width: 600px){
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            /* background-color: black; */
+        }
+    }
+</style>
+<body>
+    {% block content %}
+    
+    {% endblock content %}
+
+<footer>
+    <div class="container flex">
+        <div id="logo" class="footer-content flex">
+            <img src="{% static 'logo/logo3.png' %}" alt="logo" id="logo-image">
+            <div id="logo-text">Food Donate</div>
+        </div>
+        <div id="about" class="footer-content">
+            <div class="footer-title">Who we are</div>
+            <a href="" class="footer-link">Contact Us</a>
+        </div>
+        <div id="start" class="footer-content">
+            <div class="footer-title">Get involved</div>
+            <a href=""  class="footer-link">Donate</a>
+            <a href=""  class="footer-link">Request for food</a>
+        </div>
+    </div>
+    <div id="thanks">Made with ❤</div>
+</footer>
+</body>
+</html>
