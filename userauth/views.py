@@ -11,7 +11,7 @@ def registration_view(request):
     user = request.user
 
     if user.is_authenticated:
-        return redirect("app")
+        return redirect("blog")
 
     if request.POST:
         form = RegistrationForm(request.POST)
@@ -49,10 +49,10 @@ def login_view(request):
 
             if user:
                 login(request, user)
-                return redirect('app')
+                return redirect('blog')
 
     else:  # GET Request for HTML
         form = AccountAuthenticationForm()
 
         context['login_form'] = form
-        return render(request, 'teacherauth/login.html', context)
+        return render(request, 'userauth/login.html', context)

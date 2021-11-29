@@ -14,8 +14,12 @@
 
     #header-main-parent{
         background-image:linear-gradient( to right,#000000 1% ,#00000050)
-        /* ,url({% static 'image/main-image' %})*/; 
+        ,url({% static 'image/main-image.jpg' %}); 
         height:100vh;
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: cover;
+        
     }
     #header-container{
         align-items: center;
@@ -83,8 +87,8 @@
         <nav>
             <ul id="navigation-list" class="flex-row">
                 <li id="aboutus">About Us</li>
-                <li id="request">Request</li>
-                <li id="donate">Donate</li>
+                <li id="request"><a href="{% url 'register' %}">Request</a></li>
+                <li id="donate"><a href="{% url 'register' %}">Donate</a></li>
             </ul>
         </nav>
     </div>
@@ -97,8 +101,8 @@
             </h2>
         </div>
         <ul id="navigation-list" class="flex-row">
-            <li id="request1">Request</li>
-            <li id="donate">Donate</li>
+            <li id="request1"><a href="{% url 'register' %}">Request</a></li>
+            <li id="donate"><a href="{% url 'register' %}">Donate</a></li>
         </ul> 
     </div>
 </main>
